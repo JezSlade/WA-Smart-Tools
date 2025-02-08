@@ -1,26 +1,4 @@
-# Node modules (if using npm/yarn for dependencies)
 node_modules/
-
-# Build output
-/dist/
-/build/
-
-# Log files
-*.log
-
-# Environment files (for sensitive data, like API keys)
-*.env
-
-# VS Code settings
-.vscode/
-
-# macOS-specific files
 .DS_Store
-
-# Windows-specific files
-Thumbs.db
-
-# Extension-specific build files
-*.zip
-*.crx
-*.bak
+*.log
+*.lock
