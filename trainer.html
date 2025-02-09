@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainer Mode</title>
+    <link rel="stylesheet" href="trainer.css">
+</head>
+<body>
+    <div id="trainer-container">
+        <h2>Trainer Mode</h2>
+        <button id="dev-mode-toggle">Enter Developer Mode</button>
+        <div id="trainer-ui" style="display: none;">
+            <button id="define-input-field">Define Input Field</button>
+            <button id="define-message-field">Define Message Field</button>
+            <button id="finish-training" disabled>Finish Training</button>
+        </div>
+        <div id="confirmation">
+            <p id="input-confirmation">Input Field Defined: <span id="input-field-status">No</span></p>
+            <p id="message-confirmation">Message Field Defined: <span id="message-field-status">No</span></p>
+        </div>
+    </div>
+    <script src="trainer.js"></script>
+</body>
+</html>

@@ -1,28 +1,30 @@
 {
-  "manifest_version": 3,
-  "name": "WA Smart Tools - Trainer Model",
-  "version": "0.1",
-  "description": "A training model to define input and message areas in web chat applications.",
+  "manifest_version": 2,
+  "name": "WA Smart Tools",
+  "description": "Trainer Mode and Debugging for WhatsApp Web",
+  "version": "1.0",
   "permissions": [
-    "storage",
-    "activeTab",
-    "scripting"
-  ],
-  "host_permissions": [
-    "<all_urls>"
+      "activeTab"
   ],
   "background": {
-    "service_worker": "background.js"
+      "scripts": ["background.js"],
+      "persistent": false
   },
-  "action": {
-    "default_popup": "popup.html"
+  "browser_action": {
+      "default_popup": "popup.html"
   },
   "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"],
-      "css": ["content.css"]
-    }
+      {
+          "matches": ["<all_urls>"],
+          "js": ["content.js"]
+      }
   ],
-  "options_page": "options.html"
+  "commands": {
+      "toggle-trainer": {
+          "suggested_key": {
+              "default": "Ctrl+Shift+T"
+          },
+          "description": "Activate Trainer Mode"
+      }
+  }
 }
