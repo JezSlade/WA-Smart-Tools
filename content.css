@@ -1,0 +1,37 @@
+/* content.css - Styling for the Trainer Model UI overlay */
+
+/* Container for the trainer overlay */
+#trainerOverlay {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    z-index: 9999;
+}
+
+/* Panel within the overlay for trainer controls */
+#trainerPanel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Basic styling for the buttons in the trainer panel */
+#trainerPanel button {
+    background: #007bff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+/* Hover state for better user feedback */
+#trainerPanel button:hover {
+    background: #0056b3;
+}

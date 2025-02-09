@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WA Smart Tools</title>
-    <script src="popup.js" defer></script>
+    <title>WA Smart Tools Trainer</title>
     <style>
-        body { width: 200px; font-family: Arial, sans-serif; text-align: center; }
-        button { margin-top: 10px; padding: 5px; width: 100%; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+        }
+        button {
+            background: #007bff;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            color: #fff;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
     </style>
 </head>
 <body>
-    <h2>WA Smart Tools</h2>
-    <button id="testFeature">Test Feature</button>
+    <h3>WA Smart Tools</h3>
+    <p>Toggle Dev Mode to enable or disable Trainer Mode.</p>
+    <button id="toggleDevMode">Toggle Dev Mode</button>
+    <script src="popup.js"></script>
 </body>
 </html>

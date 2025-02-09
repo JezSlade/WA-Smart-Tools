@@ -1,20 +1,28 @@
 {
   "manifest_version": 3,
-  "name": "WA Smart Tools",
+  "name": "WA Smart Tools - Trainer Model",
   "version": "0.1",
-  "description": "Enhancement Suite for WhatsApp Web",
-  "permissions": ["storage", "scripting", "activeTab"],
-  "host_permissions": ["https://web.whatsapp.com/*"],
+  "description": "A training model to define input and message areas in web chat applications.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
   "background": {
     "service_worker": "background.js"
   },
-  "content_scripts": [
-    {
-      "matches": ["https://web.whatsapp.com/*"],
-      "js": ["content.js"]
-    }
-  ],
   "action": {
     "default_popup": "popup.html"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "options_page": "options.html"
 }
