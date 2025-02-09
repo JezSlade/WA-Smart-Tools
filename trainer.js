@@ -2,7 +2,13 @@ let inputFieldDefined = false;
 let messageFieldDefined = false;
 
 document.getElementById("dev-mode-toggle").addEventListener("click", function() {
-    document.getElementById("trainer-ui").style.display = "block";
+    // Toggle visibility of the trainer UI when in dev mode
+    const trainerUI = document.getElementById("trainer-ui");
+    if (trainerUI.style.display === "none" || trainerUI.style.display === "") {
+        trainerUI.style.display = "block";
+    } else {
+        trainerUI.style.display = "none";
+    }
 });
 
 document.getElementById("define-input-field").addEventListener("click", function() {
@@ -26,7 +32,7 @@ document.getElementById("define-message-field").addEventListener("click", functi
 document.getElementById("finish-training").addEventListener("click", function() {
     if (inputFieldDefined && messageFieldDefined) {
         alert("Training Completed! Your configurations have been saved.");
-        // Call function to send data to your backend or save locally.
+        // You can send the data to your backend or save locally here
         window.close(); // Close trainer window
     } else {
         alert("Please define all areas before finishing.");
